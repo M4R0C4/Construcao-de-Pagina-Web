@@ -1,0 +1,674 @@
+Questão 1:
+
+Estrutura - HTML
+
+Página Planos (assim que clicar no link PLANOS)
+
+<!DOCTYPE html>
+<html><head><title>Halteres seus Hábitos</title>
+<base target="_blank" />
+<link rel="stylesheet" type="text/css"
+href="mstyle.css" />
+<link href='https://fonts.googleapis.com/css?family=Karla|Stoke'
+ rel='stylesheet'>
+ <script language="Javascript" src="script.js"> </script> 
+</head>
+<body>
+<header>
+<address class="ender">
+ Estrada do Puxa Ferro, 12<br/>
+ Tel: (21) 91234-5678<br/>
+ <a href="mailto:contato@halterhabit.com.br">
+ contato@halterhabit.com.br</a></address>
+ <img class="imgLogo"
+ src="C:\Users\Fast Escritorio\Desktop\Mariana\AD2 - CPW\AD2r\HalteresSeusHabitosTopo.png"/>
+ <br>
+</header>
+<nav>
+    <ul>
+        <li><a href="2_HalteresSeusHabitos.html">Apresentação</a></li>
+         <li><a href="1_Planos.html">Planos</a></li>
+         <li><a href="4_Equipamentos.html">Equipamentos</a></li>
+         <li><a href="5_Inscricao.html">Inscrição</a></li>
+        </ul>
+</nav>
+<section>
+    <h3 class="Titulo">Planos
+     (<span class="preco">valor mensal</span>)</h3>
+    <ul class="listaPlano">
+        <li><a href="planoAcademia.html">Academia</a></li>
+        <li><a href="planoNatacao.html">Natação (3x por semana)</a></li>
+        <li><a href="planoCombo.html">Combo (Musculação + Natação)</a></li>
+</ul>
+<h4 class="Titulo">Matrícula Obrigatória: R$
+    <span class="preco">80,00</span></h4>
+   
+</body>
+</html>
+
+section Planos Natação
+
+<section>
+    <h3 class="Titulo">Natação
+     (<span class="preco">3x Semana</span>)</h3>
+    <ul class="listaPlano">
+        <img src="C:\Users\Fast Escritorio\Desktop\Mariana\AD2 - CPW\AD2r\Natacao.png" alt="">
+</ul>
+<h4 class="Titulo">Anual: R$<span class="preco">300,00</span></h4>
+<h4 class="Titulo">Semestral: R$<span class="preco">340,00</span></h4>
+<h4 class="Titulo">Mensal: R$<span class="preco">380,00</span></h4><br>
+<button onclick="fechar()">Fechar</button>
+</section> 
+
+section Planos Combo
+
+<section>
+    <h3 class="Titulo">Combo
+     (<span class="preco">Natação + Academia</span>)</h3>
+    <ul class="listaPlano">
+        <img src="C:\Users\Fast Escritorio\Desktop\Mariana\AD2 - CPW\AD2r\Combo.png" alt="">
+</ul>
+<h4 class="Titulo">Anual: R$<span class="preco">330,00</span></h4>
+<h4 class="Titulo">Semestral: R$<span class="preco">390,00</span></h4>
+<h4 class="Titulo">Mensal: R$<span class="preco">440,00</span></h4><br>
+<button id="botFechar" onclick="fechar()">Fechar</button>
+</section> 
+
+section Planos Academia
+
+<section>
+    <h3 class="Titulo">Academia
+        (<span class="preco">Musculação</span>)</h3>
+       <ul class="itemPlano">
+           <img src="C:\Users\Fast Escritorio\Desktop\Mariana\AD2 - CPW\AD2r\Academia.png" alt="">
+   </ul>
+   <h4 class="Titulo">Anual: R$<span class="preco">180,00</span></h4>
+   <h4 class="Titulo">Semestral: R$<span class="preco">220,00</span></h4>
+   <h4 class="Titulo">Mensal: R$<span class="preco">260,00</span></h4><br>
+   <button id="botFechar" onclick="fechar()">Fechar</button>
+</section>
+
+
+
+Folha de Estilos - css
+
+/*
+* Estilo Seções
+*/
+header {
+    display: block;
+    margin-bottom: 1px;
+   }
+nav {
+    display: block;
+    width: 20%;
+    float: left;
+   }
+section {
+    display: block;
+    width: 70%;
+    float: right;
+}
+   /*
+   * Estilo Geral
+   */
+body {
+    color: #000000;
+    font-size: 16px;
+    background-color: #DDCC55;
+    font-family: stoke, Lucida Bright, liberation;
+   }
+a:link { color:#222222; text-decoration:none; }
+a:visited { color:#222222; text-decoration:none; }
+ol { line-height: 200%; }
+ul { line-height: 200%; }
+   /*
+   * Estilo Nav
+   */
+nav ul {
+    color: #000000;
+    margin-top: 40px;
+    line-height: 230%;
+    list-style-type: square;
+}
+   /*
+   * Estilo Header
+   */
+.ender {
+    float: right;
+    text-align: right;
+    font-size: 14px;
+    line-height: 140%;
+    font-family: karla, verdana, ubuntu;
+   }
+img.imgLogo {
+    padding-bottom: 15px;
+    border-bottom: 3px solid #222222;
+    margin-bottom: 6px;
+   }
+   /***************************************
+   * Estilo Seção Apresentação
+   */
+div.apres {
+    text-align: center;
+    font-size: 16px;
+   }
+
+   /***************************************
+* Estilo Seção Planos
+*/
+.Titulo {
+    text-align: center;
+   }
+h4 {
+    font-size: 14px;
+}
+.listaPlano {
+    width: 300px;
+    color: #202020;
+    font-size: 12px;
+    border: 3px solid #202020;
+    margin: 0px auto 10px auto;
+    padding: 10px 10px 10px 30px;
+    background-color: #EEEEBB;
+    list-style-type: square;
+}
+.itemPlano {
+    width: 155px;
+    color: #202020;
+    font-size: 12px;
+    border: 3px solid #202020;
+    margin: auto auto auto auto;
+    padding: 20px 10px 10px 10px;
+    background-color: #EEEEBB;
+   }
+button{
+    display: block;
+    margin: 10px auto 0;
+} 
+
+Script JavaScript
+
+Botão
+function fechar(){
+   window.close();
+}
+
+Questão 2
+
+Estrutura HTML 
+
+Página Principal dos Equipamentos
+
+<!DOCTYPE html>
+<html><head><title>Halteres seus Hábitos</title>
+<base target="_blank" />
+<link rel="stylesheet" type="text/css"
+href="mstyle.css" />
+<link href='https://fonts.googleapis.com/css?family=Karla|Stoke'
+ rel='stylesheet'>
+ <script language="Javascript" src="script.js"> </script> 
+</head>
+<body>
+<header>
+<address class="ender">
+ Estrada do Puxa Ferro, 12<br/>
+ Tel: (21) 91234-5678<br/>
+ <a href="mailto:contato@halterhabit.com.br">
+ contato@halterhabit.com.br</a></address>
+ <img class="imgLogo"
+ src="C:\Users\Fast Escritorio\Desktop\Mariana\AD2 - CPW\AD2r\HalteresSeusHabitosTopo.png"/>
+ <br>
+</header>
+<nav>
+    <ul>
+        <li><a href="2_HalteresSeusHabitos.html">Apresentação</a></li>
+         <li><a href="1_Planos.html">Planos</a></li>
+         <li><a href="4_Equipamentos.html">Equipamentos</a></li>
+         <li><a href="5_Inscricao.html">Inscrição</a></li>
+        </ul>
+</nav>
+<section>
+    <table class="tabEquip">
+        <tr>
+            <th colspan="4" class="tabTitulo">Alguns dos Nossos Equipamentos</th>
+        </tr>
+        <tr>
+            <th onclick="supino()">SUPINO</th> 
+            <td rowspan="3" colspan="2" class="imgCel"><img src="C:\Users\Fast Escritorio\Desktop\Mariana\AD2 - CPW\AD2r\Vazio_360.png" alt=""></td>
+            <td rowspan="3" colspan="3" class="infoEquip"><img src="C:\Users\Fast Escritorio\Desktop\Mariana\AD2 - CPW\AD2r\Vazio_360.png" alt=""></td>
+        </tr>
+        <tr>
+            <th onclick="remada ()">REMADA</th>
+        </tr>
+        <tr>
+            <th onclick="extensora ()">EXTENSORA</th>
+        </tr>
+
+    </table>
+</section>
+</body>
+</html>
+
+Folha de Estilos - CSS
+
+.tabelaExterna{
+    width: 300px;
+    height: 300px;
+    border: 3px solid;
+}
+table.tabEquip {
+    width: 510px;
+    height: 400px;
+    border: 1px solid;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-collapse: separate;
+}
+th{
+    border: 1px ;
+    color: #FFFFFF;
+    background-color: #802020;
+}
+table th:hover {
+    color: #FFEE88; /* Muda a cor ao passar o mouse */
+}
+.tabEquip .imgCel {
+    width: 130px;
+    border: 2px solid black;
+    background-color: #FFFFFF;
+}
+.tabEquip .infoEquip {
+    width: 250px;
+    height: 230px;
+    text-align: justify;
+    border: 2px solid black;
+    background-color: #FFFFFF;
+}
+.imgCel img{
+    width: 130px;
+    height: 130px;
+}
+
+
+Srcipt JavaScript
+
+
+
+const detSupino = [
+    {
+    nome: "Supino",
+    imagem: "AD2r/SupinoVertical.png", 
+    descricao: "O supino é um exercício eficaz para desenvolver a parte superior do corpo, focando nos músculos do peito, ombros e tríceps.",
+    fonte: "https://www.academiacentralfitness.com.br/post/supinom%C3%A1quina-como-fazer-benef%C3%ADcios-e-varia%C3%A7%C3%B5es"
+    }
+]
+const remadaBaixa = [{
+    nome: "Remada Baixa",
+    imagem: "AD2r/RemadaBaixa.png", 
+    descricao: "A remada baixa trabalha os músculos das costas, incluindo o latíssimo do dorso, trapézio e deltoide posterior.",
+    fonte: "https://www.hipertrofia.org/blog/2018/03/24/remadabaixa/"
+}]
+const detExtensora = [{
+    nome: "Cadeira Extensora",
+    imagem: "AD2r/CadeiraExtensora.png",
+    descricao: "A cadeira extensora foca no fortalecimento dos músculos do quadríceps, através da extensão do joelho.",
+    fonte: "https://treinomestre.com.br/cadeira-extensora-comopotencializar-os-resultados-4-dicas-importantes/"
+
+}]
+
+function supino (){
+    const equipSupino = document.querySelector(".infoEquip");
+    if (equipSupino) {
+        equipSupino.innerHTML = `
+        <td rowspan="3" colspan="3" class="infoEquip">
+        <h2>${detSupino[0].nome}</h2>
+        <p>${detSupino[0].descricao}</p>
+        <a href="${detSupino[0].fonte}" target="_blank">Leia mais sobre ${detSupino[0].nome}</a>
+        </td>
+        `
+    const imgSupino = document.querySelector(".imgCel");
+    if (imgSupino){
+        imgSupino.innerHTML = `
+        <td rowspan="3" colspan="2" class="imgCel">
+        <img src="${detSupino[0].imagem}" alt="${detSupino[0].nome}">
+        </td>`
+    }
+    }
+}
+function remada (){
+    const equipRemada = document.querySelector(".infoEquip");
+    if (equipRemada) {
+        equipRemada.innerHTML = `
+        <td rowspan="3" colspan="3" class="infoEquip">
+        <h2>${remadaBaixa[0].nome}</h2>
+        <p>${remadaBaixa[0].descricao}</p>
+        <a href="${remadaBaixa[0].fonte}" target="_blank">Leia mais sobre ${remadaBaixa[0].nome}</a>
+        </td>
+        `
+    const imgRemada = document.querySelector(".imgCel");
+    if (imgRemada){
+        imgRemada.innerHTML = `
+        <td rowspan="3" colspan="2" class="imgCel">
+        <img src="${remadaBaixa[0].imagem}" alt="${remadaBaixa[0].nome}">
+        </td>`
+    }
+    }
+}
+function extensora (){
+    const equipExtensora = document.querySelector(".infoEquip");
+    if (equipExtensora) {
+        equipExtensora.innerHTML = `
+        <td rowspan="3" colspan="3" class="infoEquip">
+        <h2>${detExtensora[0].nome}</h2>
+        <p>${detExtensora[0].descricao}</p>
+        <a href="${detExtensora[0].fonte}" target="_blank">Leia mais sobre ${detExtensora[0].nome}</a>
+        </td>
+        `
+    const imgExtensora = document.querySelector(".imgCel");
+    if (imgExtensora){
+        imgExtensora.innerHTML = `
+        <td rowspan="3" colspan="2" class="imgCel">
+        <img src="${detExtensora[0].imagem}" alt="${detExtensora[0].nome}">
+        </td>`
+    }
+    }
+}
+
+
+Questão 3
+
+Section HTML - Inscrição
+
+<section>
+    <h3 class="Titulo">Inscrição</h3>
+    <form method="POST">
+    <div class="formul">
+    <fieldset class="fsPessoal">
+    <legend> Dados Pessoais&nbsp;</legend>
+    <div class="linhaNome">
+     <label for="nome" class="ColEsqPes">Nome: </label>
+     <input type="text" class="inpNome"
+     id="nome" name="TxtNome">
+    </div>
+    <div class="linhaDados">
+     <fieldset class="fsGenero">
+     <legend> Genero&nbsp;</legend>
+     <input type="radio" name="TglGenero" value="M">
+     Masculino<br/>
+     <input type="radio" checked name="TglGenero" value="F">
+     Feminino<br/>
+     <input type="radio" name="TglGenero" value="O"> Outro<br/>
+     </fieldset>
+    
+    <br/><label for="tel" class="ColEsqPes">Telefone: </label>
+     <input type="tel" class="inpTelef"
+     id="tel" name="TxtTelefone" onchange="validarTelefone()"/><br/>
+    <br/><label for="cel" class="ColEsqPes">Celular: </label>
+     <input type="tel" class="inpTelef"
+     id="cel" name="TxtCelular" onchange="validarTelefone()"/><br/>
+    <br/><label for="idade" class="ColEsqPes">Idade:</label>
+     <input type="number" class="numDD"
+     id="idade" name="TxtIdade"
+     min="18" max="88" value="18" / ><br/>
+    </div>
+    </fieldset>
+    <fieldset class="fsPessoal">
+    <legend> Matrícula&nbsp;</legend>
+    <div class="linhaNome">
+    <label for="mat">Matrículado?
+     <input type="checkbox" name="chkMatric"
+     value="S" id="mat" /></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="mat" class="ColDirMat">Número:
+    <input type="text" class="inpMat"
+     id="mat" name="TxtMatricula" />
+    </div>
+    <div class="linhaNome">
+    <label for="ativ">Atividade:
+     <select id="Atividade">
+     <option> ----- </option>
+     <option value="Academia">Academia</option>
+     <option value="Natcao">Natação</option>
+     <option value="Combo">Combo</option></select> </label>
+    &nbsp;&nbsp;
+    <label for="plano" class="ColDirMat">Plano:
+     <select id="Plano">
+     <option> ----- </option>
+     <option value="Anual">Anual</option>
+     <option value="Semestral">Semestral</option>
+     <option value="Mensal">Mensal</option></select> </label>
+    </div>
+    <fieldset><legend> Cartão&nbsp;</legend>
+    <label class="colLabCrd" >Bandeira:
+    <label><input type="radio" name="RadBand" checked />Visa</label>
+    <label><input type="radio" name="RadBand" />Master</label>
+    <label><input type="radio" name="RadBand" />Elo</label>
+    </label><br/>
+    <label class="colLabCrd" for="mesVal">Validade:&nbsp;&nbsp;
+    <input type="number" name="TxtMesVal" id="mesVal"
+     min="1" max="12" class="numDD" value="10" /> /
+    <input type="number" name="TxtAnoVal" value="2024"
+     min="2023" max="2040" class="numQD" /></label><br/>
+    <label class="colLabCrd" for="numCar">Número:&nbsp;&nbsp;
+    <input type=text name="TxtNumCard"
+     class="inpNCC" id="numCar"/></label><br/>
+    </fieldset>
+    <div class="linhaNome">
+    <input type="button" value="Matrícula+Plano" onclick="verificarSelecao()">
+    <!---<button onclick="verificarSelecao()">Matricula+Plano</button>--->
+    <label for="TxtTotal" class="ColDirMat">Valor: R$
+    <input type="text" name="TxtTotal" readonly
+     id="TxtTotal" class="inpVal" /></label>
+    </div>
+    </fieldset>
+    <p class="entDireita">
+     <input type="submit" valuSe="Enviar" name="BtnEnviar">
+     <input type="reset" value="Limpar" name="BtnLimpar">
+     </p>
+    <br><br>
+    </div>
+    </form>
+    </section>
+
+
+Script 
+
+function validarTelefone() {
+    const telefone = document.getElementById('tel').value;
+    const celular = document.getElementById('cel').value;
+    
+
+
+    if (telefone.length > 0 && telefone.length !== 8) {
+        alert('O telefone fixo deve ter exatamente 8 dígitos.');
+        return
+    }
+    if (celular.length > 0 && celular.length !== 9) {
+        alert('O celular deve ter exatamente 9 dígitos.');
+        return
+    }
+    if (celular.length > 0 && !/^\d+$/.test(celular)) {
+        alert('O celular deve conter apenas números.');
+        return
+    }
+    else {
+        
+    }
+}
+
+CSS - Inscrição
+
+.formul {
+    width: 400px;
+    color: #202020;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px auto 10px auto;
+    border: 3px solid #202020;
+    background-color: #EEEEBB;
+   }
+   .fsPessoal {
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   .linhaNome {
+    height: 30px;
+    width: 340px;
+    padding-top: 8px;
+   }
+   .linhaDados {
+    width: 340px;
+    height: 130px;
+   }
+   .fsGenero {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+   }
+   .fsCartao {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   .inpNome {
+    width: 220px;
+   }
+   .ColDirMat {
+    float: right;
+   }
+   .ColEsqPes {
+    float: left;
+    width: 70px;
+    display: block;
+   }
+   .numDD { width:35px; }
+   .numQD { width:50px; }
+   .inpNCC { width: 130px; }
+   .inpTelef { width: 90px; }
+   .inpMat { width: 70px; }
+   .inpVal { width: 50px; }
+   .colLabCrd {
+    width: 270px;
+    height: 30px;
+    float: left;
+    text-align: left;
+   }
+   .colValTot {
+    float: left;
+    width: 220px;
+    display: block;
+    text-align: left;
+   }
+   .entDireita {
+    float: right;
+    margin-right: 20px;
+   }
+
+Questão 4
+function verificarSelecao() {
+    const atividadeSelecionada = atividadeSelect.value;
+    const planoSelecionado = planoSelect.value;
+    let valormostrado = document.getElementById("TxtTotal");
+    const matriculadoCheckbox = document.getElementById("checkmat"); // Verifica o estado do checkbox "Matriculado?"
+    let numMatricula = document.getElementById("mat").value; // Verifica o campo da Matricula
+
+    // Verifica se os campos de atividade e plano estão preenchidos
+    if(!matriculadoCheckbox.checked && numMatricula === "" && atividadeSelecionada !== '-----' && planoSelecionado !== '-----'){
+        alert("Os campos preenchidos não batem. Verificar os campos 'Matriculado?' e o campo 'Número'. ");
+    } else if (atividadeSelecionada === '-----') {
+        alert("Escolha uma Atividade")
+        return;  // Sai da função para evitar cálculos desnecessários
+    } else if (planoSelecionado === '-----'){
+        alert("Selecione um Plano")
+    } 
+    
+
+    // Verifica se está matriculado e o número de matrícula foi preenchido
+    if (matriculadoCheckbox.checked && numMatricula !== "") {
+        console.log("Matriculado");
+        // Cálculos para alunos matriculados, sem taxa de matrícula
+        if (atividadeSelecionada == "Academia" && planoSelecionado == "Anual") {
+            const valorTotal = anualAcademia * 12;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Academia" && planoSelecionado == "Semestral") {
+            const valorTotal = semestralAcademia * 6;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Academia" && planoSelecionado == "Mensal") {
+            const valorTotal = mensalAcademia;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Combo" && planoSelecionado == "Anual") {
+            const valorTotal = anualCombo * 12;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Combo" && planoSelecionado == "Semestral") {
+            const valorTotal = semestralCombo * 6;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Combo" && planoSelecionado == "Mensal") {
+            const valorTotal = mensalCombo;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Natacao" && planoSelecionado == "Anual") {
+            const valorTotal = anualNatacao * 12;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Natacao" && planoSelecionado == "Semestral") {
+            const valorTotal = semestralNatacao * 6;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Natacao" && planoSelecionado == "Mensal") {
+            const valorTotal = mensalNatacao;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        }
+    } else if (!matriculadoCheckbox.checked && numMatricula === "") {
+        //valormostrado.value = "FOOI"
+        console.log("Não Matriculado");
+        // Cálculos para alunos não matriculados, com taxa de matrícula
+        if (atividadeSelecionada == "Academia" && planoSelecionado == "Anual") {
+            const valorTotal = matricula + (anualAcademia * 12);
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Academia" && planoSelecionado == "Semestral") {
+            const valorTotal = matricula + (semestralAcademia * 6);
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Academia" && planoSelecionado == "Mensal") {
+            const valorTotal = matricula + mensalAcademia;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Combo" && planoSelecionado == "Anual") {
+            const valorTotal = matricula + (anualCombo * 12);
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Combo" && planoSelecionado == "Semestral") {
+            const valorTotal = matricula + (semestralCombo * 6);
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Combo" && planoSelecionado == "Mensal") {
+            const valorTotal = matricula + mensalCombo;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Natacao" && planoSelecionado == "Anual") {
+            const valorTotal = matricula + (anualNatacao * 12);
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Natacao" && planoSelecionado == "Semestral") {
+            const valorTotal = matricula + (semestralNatacao * 6);
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        } else if (atividadeSelecionada == "Natacao" && planoSelecionado == "Mensal") {
+            const valorTotal = matricula + mensalNatacao;
+            console.log(`O preço a ser pago é de: R$ ${valorTotal}.`);
+            valormostrado.value = valorTotal;
+        }
+        
+    }
+}
+
